@@ -1,0 +1,29 @@
+package arrays;
+
+public class RemoveDuplicateSortedArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] nums = {0,0,1,1,1,2,2,3,3,4};
+		int k = removeDuplicates(nums);
+		System.out.println(k);
+
+	}
+	
+	public static int removeDuplicates(int[] nums) {
+        int ans = nums.length;
+        int count = 0;
+        for(int i = 0; i < nums.length; i++) {
+        	if(nums[i] == nums[i+1]) {
+        		int num = nums[i+1];
+        		count++;
+        		for(int j = i+1; j < nums.length-count; j++) {
+        			nums[j] = nums[j+1];
+        		}
+        		nums[nums.length-count] = num;
+        	}
+        }
+        return ans-count;
+    }
+
+}
