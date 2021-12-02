@@ -1,0 +1,33 @@
+package math;
+
+public class IntegerToRoman {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 58;
+		String ans = intToRoman(num);
+	}
+	
+	public static String intToRoman(int num) {
+		// Mapping Integers to Roman Numerals using two Arrays.
+        int[] val = new int[] {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] let = new String[] {"M", "CM", "D", "CD", "C", "XC", "L", "XL", 
+                                     "X", "IX", "V", "IV", "I"};
+        StringBuilder sb = new StringBuilder();
+        
+		// Iterating through the mapped arrays.
+        for (int i = 0; i < val.length; i++) {
+			// If val[i] <= num, the let[i] will be appended and num will be decremented by val[i]'s value.
+			// Also, i is decremented by 1 to check the current i's value against num again in the next iteration.
+			// This is mainly done to not use another loop :)
+            if (val[i] <= num) {
+                sb.append(let[i]);
+                num -= val[i];
+                i--;
+            }
+        }
+            
+        return sb.toString();
+	}
+
+}
