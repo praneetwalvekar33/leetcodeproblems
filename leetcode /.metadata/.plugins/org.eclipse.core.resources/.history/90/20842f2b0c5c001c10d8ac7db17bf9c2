@@ -1,0 +1,11 @@
+package math;
+//	https://leetcode.com/problems/valid-perfect-square/submissions/
+
+public class ValidPerfectSquare1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
