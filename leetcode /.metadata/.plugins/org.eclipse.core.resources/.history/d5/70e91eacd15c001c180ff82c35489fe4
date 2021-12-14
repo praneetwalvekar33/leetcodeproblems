@@ -1,0 +1,31 @@
+package math;
+
+public class MaximumProductOfThreeNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {1,2,3,4};
+		int product = maximumProduct(arr);
+		System.out.println(product);
+	}
+	
+	public static int maximumProduct(int[] nums) {
+        if(nums.length == 3) {
+        	return nums[0]*nums[1]*nums[2];
+        }
+        int ans = 1;
+        for(int i = 0; i < nums.length; i++) {
+        	for(int j = i+1; j < nums.length-i-1; j++) {
+        		if(nums[j]<nums[j+1]) {
+        			int temp = nums[j];
+        			nums[j] = nums[j+1];
+        			nums[j+1] = temp;
+        		}
+        	}
+        }
+        
+        ans = nums[0]*nums[1]*nums[2];
+        return ans;
+    }
+
+}

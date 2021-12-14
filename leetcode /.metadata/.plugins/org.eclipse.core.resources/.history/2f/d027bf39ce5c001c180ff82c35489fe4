@@ -1,6 +1,6 @@
 package math;
 //	https://leetcode.com/problems/valid-perfect-square/submissions/
-//	Binary Search approach
+
 public class ValidPerfectSquare1 {
 
 	public static void main(String[] args) {
