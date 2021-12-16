@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;arrays.ThreeNumbers.java&apos; to &apos;ThreeSumss.java&apos;&#x0A;- Original project: &apos;math&apos;&#x0A;- Original element: &apos;arrays.ThreeNumbers.java&apos;&#x0A;- Renamed element: &apos;arrays.ThreeSumss.java&apos;" description="Rename compilation unit &apos;ThreeNumbers.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;arrays{ThreeNumbers.java" name="ThreeSumss.java" references="false" stamp="1639628255779" version="1.0"/>
+</session>

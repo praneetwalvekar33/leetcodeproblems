@@ -1,0 +1,45 @@
+package arrays;
+//	https://leetcode.com/problems/3sum/
+//	brute force approach(not exact ans we want)
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+public class ThreeSumss {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] nums = {-1,0,1,2,-1,-4};
+		List<List<Integer>> ans = threeSums(nums);
+		
+		for(int i = 0; i < ans.size(); i++) {
+			for(int j = 0; j < 3; j++)
+			System.out.print(ans.get(i) + " ");
+		}
+	}
+	
+	public static List<List<Integer>> threeSums(int[] nums){
+		List<List<Integer>> ans = new ArrayList<List<Integer>>();
+		
+		for(int i = 0; i < nums.length-2; i++) {
+			ArrayList<Integer> subArray = new ArrayList<Integer>();
+			
+			for(int j = i+1; j < nums.length-1; j++) {
+				
+				for(int k = j+1; k < nums.length-1; k++) {
+					
+					if(nums[i]+nums[j]+nums[k] == 0 ) {
+						subArray.add(nums[i]);
+						subArray.add(nums[j]);
+						subArray.add(nums[k]);
+						break;
+					}
+				}
+			}
+			if(!ans.contains(subArray)) {
+				ans.add(subArray);
+			}
+		}
+		return ans;
+	}
+
+}
