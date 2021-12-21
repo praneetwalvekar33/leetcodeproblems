@@ -1,6 +1,6 @@
-package math;
+package binarysearch;
 
-public class MaximumProductOfThreeNumbers {
+public class SmallestCharacter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
